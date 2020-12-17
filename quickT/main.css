@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    text-rendering: optimizeLegibility;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+}
+body {
+    box-sizing: border-box;
+    font-size: 1rem;
+    background: #eee;
+    /* min-height: 100vh; */
+    /* overflow: hidden; */
+}
+.container {
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    overflow: hidden;
+    width: 100%;
+    max-width: 90rem;
+}
+.forms {
+    background: #ffffff;
+    height: 60px;
+    width: 710px;
+    padding: 1em;
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3em;
+    margin-bottom: 90px;
+}
+
+.forms:hover {
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.097);
+    transition: .3s ease-in-out;
+}
+
+.forms form {
+    margin: 0 auto;
+}
+.forms form input[type="text"] {
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+}
+.forms form input[type="submit"] {
+    padding: 15px;
+    border-radius: 2em;
+    border: none;
+    outline: none;
+    background: rgba(21, 180, 180, 0.727);
+    color: #ffffff;
+    font-weight: bold;
+    width: 170px;
+    margin-left: 3em;
+    cursor: pointer;
+}
+.forms form input[type="submit"]:focus,
+a.login:focus {
+   border: 1px solid rgba(21, 180, 180, 0.878);
+}
+form i:hover {
+    cursor: pointer;
+}
+.nav-container {
+    padding: 2em;
+}
+nav {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+span.logo {
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+a.login {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 19px;
+    color: #ffffff;
+    background: rgba(21, 180, 180, 0.727);
+    padding: 5px 10px;
+    border-radius: 1em;
+    outline: none;
+    transition: 1s;
+    cursor: pointer;
+}
+.main {
+    margin-top: 100px;
+}
+.main .hire {
+    max-width: 295px;
+    font-weight: bolder;
+    font-size: 40px;
+    line-height: 1;
+}
+.main .text {
+    margin-top: 5px;
+    max-width: 400px;
+}
+
+.extra .icons {
+    margin-top: 10px;
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+}
+.extra .icons a {
+    background: rgba(0, 0, 0, 0.083);
+    padding: 15px;
+    align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.3em;
+}
+.fa-google {
+    color: green;
+}
+.fa-twitter {
+    color: rgb(0, 81, 255);
+}
+.fa-skype {
+    color: rgba(21, 180, 180, 0.727);
+}
+.fa-microsoft {
+    color: orangered;
+}
+.img {
+    float: right;
+    z-index: -1;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    animation: med 10s infinite;
+}
+.img > img {
+    opacity: .6;
+}
+@keyframes med {
+    0% {
+        top: 20%;
+    }
+    50% {
+        top: 25%;
+    }
+    100%{
+        top: 30%
+    }
+}
+
+.overlay {
+    height: 110%;
+    width: 100%;
+    background: #00000082;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition: 1s;
+    display: none;
+    margin: 0 auto;
+}
+.overlay .close {
+    margin-top: 60px;
+    margin-left: 40px;
+    color: #ffffff;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+
+.login-form {
+    display: inline-block;
+    background: rgb(202, 199, 199);
+    padding: 2em;
+    width: auto;
+    height: auto;
+    border-radius: 2em;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.268);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    z-index: 1;
+}
+
+.sign-up-form {
+    display: inline-block;
+    background: rgb(202, 199, 199);
+    padding: 2em;
+    width: auto;
+    height: auto;
+    border-radius: 2em;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.268);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.login-form form .user,
+.login-form form .pass,
+.sign-up-form form .user,
+.sign-up-form form .pass {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.login-form form input,
+.sign-up-form form input {
+    height: 40px;
+    width: 250px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+.login-form form .too,
+.sign-up-form form .too {
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+.login-form form .eye,
+.sign-up-form form .eye {
+    margin-left: 250px;
+    margin-top: 15px;
+    position: absolute;
+    cursor: pointer;
+}
+.login-form form input[type="submit"],
+.sign-up-form form input[type="submit"] {
+    background: rgba(21, 180, 180, 0.727);
+    color: #ffffff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.login-form form input[type="submit"]:focus,
+.sign-up-form form input[type="submit"]:focus {
+    border: 3px solid rgba(21, 180, 180, 0.878);
+}
+.login-form .log-logo,
+.sign-up-form .log-logo {
+    background: #ffffff;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.login-form form .not-user,
+.sign-up-form form .not-user {
+    margin-top: 20px;
+}
+.login-form form .not-user a,
+.sign-up-form form .not-user a {
+    border: 2px solid rgba(21, 180, 180, 0.727);
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bolder;
+    background: rgba(21, 180, 180, 0.878);
+    font-style: italic;
+    cursor: pointer;
+    color: #000000;
+    opacity: .5;
+}
+
+@media(max-width: 425px) {
+    nav {
+        justify-content: space-between;
+    }
+    .img {
+        display: none;
+    }
+    .extra a{
+        margin-top: 10px;
+        margin-left: -200px;
+    }
+    .extra .icons {
+        flex-direction: column;
+    }
+    .forms form input[type="submit"] {
+        width: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .forms form input[type="text"] {
+        width: 90%;
+        /* border: 1px solid; */
+
+    }
+    .forms {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+    .overlay {
+        height: 150vh;
+    }
+}
